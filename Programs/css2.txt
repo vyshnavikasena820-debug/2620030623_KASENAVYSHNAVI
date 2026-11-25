@@ -1,0 +1,27 @@
+SLIP TEST - CSS FOR Subject: CSS Basics 
+ Marks: 10M
+
+Q1. [5 Marks] Answer all bits - 1 Mark each
+
+1a. What is CSS? What is the difference between Inline, Internal and External CSS? Write one example for each.
+
+1b. Predict the output - Which colour will the text be? Why? html<p class="box" id="main">Hello</p>css.box { color: red; }
+#main { color: blue; } p { color: green; }
+
+1c. Fill the blanks - Write CSS to make the heading red, centre aligned and 30px size:cssh1 {
+  ______: red;  text-align: ______;  ______: 30px;}
+
+1d. What is Box Model? Name the 4 parts in order from inside to outside. Draw a simple diagram.1e. Find the mistake and write the correct CSS:css.mybox {
+  width: 200px  padding: 20px;  margin: 10px  background-color: yellow}
+
+Q2. [5 Marks] Answer all bits - 1 Mark each
+
+2a. What is the difference between class selector .box and id selector #box? When do we use each?
+2b. Predict the output - How will the 3 boxes look on screen? Row or Column? Why?css.container {  display: flex;  justify-content: space-between;  gap: 10px;}
+
+2c. Fill the blanks to make a 2-column layout using Grid:css.layout {
+  display: ______;  grid-template-columns: ______ ______;  gap: 10px;}
+
+2d. What is a Media Query? Write CSS so that on mobile (max-width: 600px) the background becomes light blue and font-size becomes 14px.
+
+2e. Write full HTML + CSS code for this: A card with a heading "My Card", a paragraph, white background, 20px padding, 10px border-radius, and a button with blue background and white text. On hover, button colour should become dark blue.Coverage:Q1: CSS Types + Selectors / Specificity + Color / Font / Text + Box Model + SyntaxQ2: Class vs ID + Flexbox + Grid + Media Query / Responsive + Card + Hover

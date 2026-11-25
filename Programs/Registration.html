@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Login and Registration</title>
+
+    <style>
+        body {
+            background-color:lightgreen;
+            font-family: Arial;
+        }
+
+        .box {
+            background-color: lightyellow;
+            width: 350px;
+            padding: 25px;
+            margin: 50px auto;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        h2 {
+            color: blue;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 8px;
+            border: 1px solid gray;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkblue;
+        }
+
+        a {
+            color: blue;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .gender {
+            text-align: left;
+            margin: 10px 15px;
+        }
+
+        .gender input {
+            width: auto;
+        }
+
+        #register {
+            display: none;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- LOGIN PAGE -->
+
+    <div class="box" id="login">
+
+        <h2>Student Login</h2>
+
+        <form onsubmit="return loginUser()">
+
+            <input type="text"
+                   placeholder="Enter Username"
+                   required>
+
+            <input type="password"
+                   placeholder="Enter Password"
+                   required>
+
+            <br><br>
+
+            <button type="submit">Login</button>
+
+        </form>
+
+        <p>Don't have an account?</p>
+
+        <a onclick="showRegister()">
+            Create an Account
+        </a>
+
+    </div>
+
+
+    <!-- REGISTRATION PAGE -->
+
+    <div class="box" id="register">
+
+        <h2>Student Registration</h2>
+
+        <form onsubmit="return registerUser()">
+
+            <input type="text"
+                   placeholder="Enter Full Name"
+                   required>
+
+            <input type="email"
+                   placeholder="Enter Email"
+                   required>
+
+            <input type="tel"
+                   placeholder="Enter Phone Number"
+                   required>
+
+            <label>Date of Birth:</label>
+
+            <input type="date" required>
+
+            <div class="gender">
+
+                <b>Gender:</b><br>
+
+                <input type="radio" name="gender"
+                       value="Male" required>
+                Male
+
+                <input type="radio" name="gender"
+                       value="Female">
+                Female
+
+                <input type="radio" name="gender"
+                       value="Other">
+                Other
+
+            </div>
+
+            <input type="text"
+                   placeholder="Create Username"
+                   required>
+
+            <input type="password"
+                   placeholder="Create Password"
+                   id="password"
+                   required>
+
+            <input type="password"
+                   placeholder="Confirm Password"
+                   id="confirmPassword"
+                   required>
+
+            <br><br>
+
+            <button type="submit">Register</button>
+
+        </form>
+
+        <p>Already have an account?</p>
+
+        <a onclick="showLogin()">
+            Login Here
+        </a>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function showRegister() {
+
+            document.getElementById("login").style.display = "none";
+
+            document.getElementById("register").style.display = "block";
+
+        }
+
+        function showLogin() {
+
+            document.getElementById("register").style.display = "none";
+
+            document.getElementById("login").style.display = "block";
+
+        }
+
+        function registerUser() {
+
+            var password =
+                document.getElementById("password").value;
+
+            var confirmPassword =
+                document.getElementById("confirmPassword").value;
+
+            if (password !== confirmPassword) {
+
+                alert("Passwords do not match!");
+
+                return false;
+            }
+
+            alert("Registration Successful!");
+
+            showLogin();
+
+            return false;
+        }
+
+        function loginUser() {
+
+            alert("Login form submitted!");
+
+            return false;
+        }
+
+    </script>
+
+</body>
+</html>
+

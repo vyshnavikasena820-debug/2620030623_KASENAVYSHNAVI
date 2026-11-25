@@ -1,0 +1,5 @@
+const double = x => x * 2;
+out += "<div class='box'>
+<b>1. Arrow Function</b>
+<br>const double = x => x*2<br>
+double(5) = " + double(5) + "</div>";
